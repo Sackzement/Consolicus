@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A77A45F01B31F6FB008AE5D5 /* Consolicus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77A45EB1B31F198008AE5D5 /* Consolicus.cpp */; };
+		A77A46001B31FB94008AE5D5 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77A45F21B31FB94008AE5D5 /* Console.cpp */; };
+		A77A46011B31FB94008AE5D5 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77A45F41B31FB94008AE5D5 /* Game.cpp */; };
+		A77A46021B31FB94008AE5D5 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77A45FA1B31FB94008AE5D5 /* Sprite.cpp */; };
+		A77A46031B31FB94008AE5D5 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77A45FC1B31FB94008AE5D5 /* Window.cpp */; };
+		A7C477EF1B31D24900A76A99 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C477ED1B31D24900A76A99 /* SDL2_image.framework */; };
+		A7C477F01B31D24900A76A99 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C477EE1B31D24900A76A99 /* SDL2.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A75FCCB61B319D4F00AECE06 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A75FCCB81B319D4F00AECE06 /* Consolicus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Consolicus; sourceTree = BUILT_PRODUCTS_DIR; };
+		A77A45EB1B31F198008AE5D5 /* Consolicus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Consolicus.cpp; path = ../Consolicus.cpp; sourceTree = "<group>"; };
+		A77A45F21B31FB94008AE5D5 /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Console.cpp; path = ../src/Console.cpp; sourceTree = "<group>"; };
+		A77A45F31B31FB94008AE5D5 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Console.h; path = ../src/Console.h; sourceTree = "<group>"; };
+		A77A45F41B31FB94008AE5D5 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../src/Game.cpp; sourceTree = "<group>"; };
+		A77A45F51B31FB94008AE5D5 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../src/Game.h; sourceTree = "<group>"; };
+		A77A45F61B31FB94008AE5D5 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Key.h; path = ../src/Key.h; sourceTree = "<group>"; };
+		A77A45F71B31FB94008AE5D5 /* Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mask.h; path = ../src/Mask.h; sourceTree = "<group>"; };
+		A77A45F81B31FB94008AE5D5 /* myvararg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myvararg.h; path = ../src/myvararg.h; sourceTree = "<group>"; };
+		A77A45F91B31FB94008AE5D5 /* Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Size.h; path = ../src/Size.h; sourceTree = "<group>"; };
+		A77A45FA1B31FB94008AE5D5 /* Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sprite.cpp; path = ../src/Sprite.cpp; sourceTree = "<group>"; };
+		A77A45FB1B31FB94008AE5D5 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite.h; path = ../src/Sprite.h; sourceTree = "<group>"; };
+		A77A45FC1B31FB94008AE5D5 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Window.cpp; path = ../src/Window.cpp; sourceTree = "<group>"; };
+		A77A45FD1B31FB94008AE5D5 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = ../src/Window.h; sourceTree = "<group>"; };
+		A77A45FF1B31FB94008AE5D5 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Word.h; path = ../src/Word.h; sourceTree = "<group>"; };
+		A7C477ED1B31D24900A76A99 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = /Library/Frameworks/SDL2_image.framework; sourceTree = "<absolute>"; };
+		A7C477EE1B31D24900A76A99 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A75FCCB51B319D4F00AECE06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7C477F01B31D24900A76A99 /* SDL2.framework in Frameworks */,
+				A7C477EF1B31D24900A76A99 /* SDL2_image.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A75FCCAF1B319D4F00AECE06 = {
+			isa = PBXGroup;
+			children = (
+				A77A45EB1B31F198008AE5D5 /* Consolicus.cpp */,
+				A77A45F11B31FB5C008AE5D5 /* src */,
+				A77A45EC1B31F22F008AE5D5 /* frameworks */,
+				A75FCCB91B319D4F00AECE06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A75FCCB91B319D4F00AECE06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A75FCCB81B319D4F00AECE06 /* Consolicus */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A77A45EC1B31F22F008AE5D5 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7C477ED1B31D24900A76A99 /* SDL2_image.framework */,
+				A7C477EE1B31D24900A76A99 /* SDL2.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		A77A45F11B31FB5C008AE5D5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A77A45F51B31FB94008AE5D5 /* Game.h */,
+				A77A45F31B31FB94008AE5D5 /* Console.h */,
+				A77A45FD1B31FB94008AE5D5 /* Window.h */,
+				A77A45FB1B31FB94008AE5D5 /* Sprite.h */,
+				A77A45F41B31FB94008AE5D5 /* Game.cpp */,
+				A77A45F21B31FB94008AE5D5 /* Console.cpp */,
+				A77A45FC1B31FB94008AE5D5 /* Window.cpp */,
+				A77A45FA1B31FB94008AE5D5 /* Sprite.cpp */,
+				A77A45F71B31FB94008AE5D5 /* Mask.h */,
+				A77A45F61B31FB94008AE5D5 /* Key.h */,
+				A77A45F91B31FB94008AE5D5 /* Size.h */,
+				A77A45FF1B31FB94008AE5D5 /* Word.h */,
+				A77A45F81B31FB94008AE5D5 /* myvararg.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A75FCCB71B319D4F00AECE06 /* Consolicus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75FCCBF1B319D4F00AECE06 /* Build configuration list for PBXNativeTarget "Consolicus" */;
+			buildPhases = (
+				A75FCCB41B319D4F00AECE06 /* Sources */,
+				A75FCCB51B319D4F00AECE06 /* Frameworks */,
+				A75FCCB61B319D4F00AECE06 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Consolicus;
+			productName = Consolicus;
+			productReference = A75FCCB81B319D4F00AECE06 /* Consolicus */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A75FCCB01B319D4F00AECE06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = peetabyte;
+				TargetAttributes = {
+					A75FCCB71B319D4F00AECE06 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = A75FCCB31B319D4F00AECE06 /* Build configuration list for PBXProject "Consolicus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A75FCCAF1B319D4F00AECE06;
+			productRefGroup = A75FCCB91B319D4F00AECE06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A75FCCB71B319D4F00AECE06 /* Consolicus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A75FCCB41B319D4F00AECE06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A77A46011B31FB94008AE5D5 /* Game.cpp in Sources */,
+				A77A46031B31FB94008AE5D5 /* Window.cpp in Sources */,
+				A77A45F01B31F6FB008AE5D5 /* Consolicus.cpp in Sources */,
+				A77A46021B31FB94008AE5D5 /* Sprite.cpp in Sources */,
+				A77A46001B31FB94008AE5D5 /* Console.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A75FCCBD1B319D4F00AECE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A75FCCBE1B319D4F00AECE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A75FCCC01B319D4F00AECE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = ../build/mac;
+			};
+			name = Debug;
+		};
+		A75FCCC11B319D4F00AECE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = ../build/mac;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A75FCCB31B319D4F00AECE06 /* Build configuration list for PBXProject "Consolicus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75FCCBD1B319D4F00AECE06 /* Debug */,
+				A75FCCBE1B319D4F00AECE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A75FCCBF1B319D4F00AECE06 /* Build configuration list for PBXNativeTarget "Consolicus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75FCCC01B319D4F00AECE06 /* Debug */,
+				A75FCCC11B319D4F00AECE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A75FCCB01B319D4F00AECE06 /* Project object */;
+}
