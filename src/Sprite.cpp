@@ -6,26 +6,20 @@
 
 
 
-Sprite::                Sprite          ( string filename )
+            Sprite::    Sprite          ( string filename ) : Object(ot_sprite)
 {
     create(filename);
 }
-            Sprite::    Sprite          ( int w, int h )
+            Sprite::    Sprite          ( int w, int h )    : Object(ot_sprite)
 {
     create(w,h);
 }
             Sprite::   ~Sprite          ()
 {
-    destroy();
+    SDL_FreeSurface(m_sdlSurface);
+    m_sdlSurface = NULL;
 }
 
-void        Sprite::    reset           ()
-{
-    SizeRect size = getSize();
-    
-    destroy();
-    create( size.w(), size.h() );
-}
 /*void        Sprite::    show            ()
 {
     
@@ -51,10 +45,6 @@ void        Sprite::    printData       ()
 
 }
 
-string      Sprite::    getName         ()
-{
-    return m_name;
-}
 SizeRect    Sprite::    getSize         ()
 {
     if ( ! existsSdlSurface() )  return  SizeRect();
@@ -75,13 +65,6 @@ void        Sprite::    create          ( int w, int h )
                                    mask_red, mask_green, mask_blue, mask_alpha ) ;
     if( ! existsSdlSurface() )
         cout << "CreateRGBSurface failed:\t", SDL_GetError() ;
-}
-void        Sprite::    destroy         ()
-{
-    SDL_FreeSurface(m_sdlSurface);
-    m_sdlSurface = NULL;
-    
-    m_name = "";
 }
 bool        Sprite::    existsSdlSurface ()
 {

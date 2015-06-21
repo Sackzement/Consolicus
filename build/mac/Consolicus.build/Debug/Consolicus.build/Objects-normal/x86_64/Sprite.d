@@ -15,6 +15,7 @@ dependencies: \
   /Library/Frameworks/SDL2.framework/Headers/SDL_surface.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL_blendmode.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Size.h \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/Object.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Mask.h \
   /Library/Frameworks/SDL2_image.framework/Headers/SDL_image.h \
   /Library/Frameworks/SDL2.framework/Headers/SDL.h \

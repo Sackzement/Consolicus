@@ -1,0 +1,30 @@
+dependencies: \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/Program.cpp \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/Program.h \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/Console.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_events.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_stdinc.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_config.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_platform.h \
+  /Library/Frameworks/SDL2.framework/Headers/begin_code.h \
+  /Library/Frameworks/SDL2.framework/Headers/close_code.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_config_macosx.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_error.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_video.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_pixels.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_rect.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_rwops.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_surface.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_blendmode.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_keyboard.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_keycode.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_scancode.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_mouse.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_joystick.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_gamecontroller.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_quit.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_gesture.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_touch.h \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/Key.h \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/Word.h \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/Object.h

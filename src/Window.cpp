@@ -3,7 +3,7 @@
 #include <SDL2/SDL.h>
 
 
-Window::             Window     ()
+Window::             Window     () : Object(ot_window)
 {
     create();
 }

@@ -18,9 +18,24 @@ enum Wordtype
 class Word
 {
 public:
-    string   str = "";
-    Wordtype type = wt_undef;
+    string   str = "" ;
+    Wordtype type = wt_undef ;
     
+    Word()
+    {
+        str = "";
+    }
+    Word(string s)
+    {
+        str = s;
+        interpretTypeOfWord();
+    }
+    Word(char c)
+    {
+        str = c;
+        interpretTypeOfWord();
+    }
+private:
     Wordtype interpretTypeOfWord()
     {
         if ( str.length() == 0 )

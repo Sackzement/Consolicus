@@ -4,6 +4,7 @@
 #include <SDL2/SDL.h>
 #include <string>
 #include "Size.h"
+#include "Object.h"
 
 using namespace std;
 
@@ -11,7 +12,7 @@ using namespace std;
 
 
 
-class Window
+class Window : public Object
 {
 private:    // PRIVATE ======================
             // VARIABLES --------------------
@@ -23,7 +24,7 @@ private:    // PRIVATE ======================
 public:     // PUBLIC =======================
             // FUNCTIONS --------------------
                     Window          ();
-                   ~Window          ();
+    virtual        ~Window          ();
     
     void            reset           ();
     void            show            ();
@@ -36,7 +37,6 @@ public:     // PUBLIC =======================
     
     void            setTitle        ( string t );
     void            setRes          ( int w, int h );
-
     
 };
 

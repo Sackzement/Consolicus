@@ -2,6 +2,7 @@
 #include "Game.h"
 #include <iostream>
 #include "Word.h"
+#include "Object.h"
 
 
 //using namespace std;
@@ -10,13 +11,23 @@
 
 
 
-        Console::  Console( Game *  p_game )
+        Console::  Console( Game *  p_game ) : Object(ot_console)
 {
     m_strings = stack<string>() ;
     m_strings.push("") ;
     
     m_game = p_game;
     m_active = false;
+}
+        Console:: ~Console()
+{
+    
+    while ( ! m_strings.empty() )
+        m_strings.pop() ;
+    
+    m_active = false ;
+    m_game   = nullptr ;
+    
 }
 void    Console::  close()
 {
@@ -25,7 +36,7 @@ void    Console::  close()
     m_active = false;
     cout << "\nConsole\tclosed" ;
 }
-string& Console::  m_inputField()
+string& Console::  m_inputStr()
 {
     return m_strings.top();
 }
@@ -39,7 +50,7 @@ void    Console::  open ()
 }
 void    Console::  input ( SDL_KeyboardEvent key )
 {
-    if ( key.repeat > 0 ||  getKeytype(key) == kt_undef )   return;
+    if ( getKeytype(key) == kt_undef )   return;
     if ( getKeytype(key) == kt_exiter )                     return close();
     
     if ( getKeytype(key) == kt_toggle )                     return doToggle();
@@ -61,7 +72,7 @@ void    Console::  doToggle()
 {
     if ( ! isOpen() )                      return open();
     
-    if ( m_inputField().length() == 0 )     return close();
+    if ( m_inputStr().length() == 0 )     return close();
     
     
     interpretInput();
@@ -70,15 +81,15 @@ void    Console::  doToggle()
 }
 void    Console::  addKey( SDL_KeyboardEvent key )
 {
-    m_inputField() += key.keysym.sym;
+    m_inputStr() += key.keysym.sym;
 }
 void    Console::  removeKey()
 {
-    m_inputField().pop_back();
+    m_inputStr().pop_back();
 }
 void    Console::  printInput()
 {
-    cout << "\n" << m_inputField() ;
+    cout << "\n" << m_inputStr() ;
 }
 Keytype Console::  getKeytype ( char key )
 {
@@ -125,42 +136,82 @@ Keytype Console::  getKeytype ( SDL_KeyboardEvent key )
 }
 void    Console::  interpretInput()
 {
-    vector<Word> wordlist;
-    strToWordlist(m_inputField(), wordlist ) ;
     
+    vector<Word>    words ;     strToWordlist( m_inputStr(), words ) ;
+    size_t          s           = words.size() ;
+    bool smtdone = false;
     
-    
-    const vector<Word>  inWords;// = m_inputWords();
-    
-    for ( int i = 0 ; i < inWords.size() ; ++i )
+    for ( int i = 0; i < s; ++i )
     {
-        //const Word& w = inWords[i];
         
-        //if (inw )
+        if ( words[i].type == wt_name )
+        {
+            if ( words[i].str == "win" )
+            {
+                if ( s == 1 )
+                {
+                    m_game->m_window->printSettings();
+                    smtdone = true;
+                }
+                if ( s == 2)
+                {
+                    if ( words[i+1].type == wt_name )
+                    {
+                        if ( words[i+1].str == "title" )
+                        {
+                            cout << "\nWindow Title\t" << m_game->m_window->getTitle() ;
+                            smtdone = true;
+                        }
+                        else if ( words[i+1].str == "res" )
+                        {
+                            cout    << "\nWindow Resolution\t"
+                                    << m_game->m_window->getRes().w() << " "
+                                    << m_game->m_window->getRes().h() ;
+                            smtdone = true;
+                        }
+                        else if ( words[i+1].str == "fs" )
+                        {
+                            //m_game->m_window->
+                            cout << "\nFullscreen\t" << m_game->m_window->getTitle() ;
+                            smtdone = true;
+                        }
+                    }
+                }
+            }
+            else if ( words[i].str == "objs" && s == 1 )
+            {
+                ObjectManager::printAll();
+                smtdone = true ;
+            }
+            else if ( words[i].str == "da" && s == 1 )
+            {
+                ObjectManager::deleteAll() ;
+                smtdone = true ;
+            }
+            else if ( words[i].str == "ds" && s == 1 )
+            {
+                ObjectManager::deleteAll(ot_sprite) ;
+                smtdone = true ;
+            }
+            else if ( words[i].str == "db" && s == 1 )
+            {
+                ObjectManager::deleteAllBut() ;
+                smtdone = true ;
+            }
+            
+        }
+        
     }
     
-    
-    
-    
-    //if ( m_inputField().find("win") != string::npos )
-    if ( m_inputField() == "win" )
-        m_game->m_window->printSettings();
-
-    else if (m_inputField() == "win title")
-        cout << "\nWindow Title\t" << m_game->m_window->getTitle() ;
-    
-    else if (m_inputField() == "win res")
-        cout << "\nWindow Resolution\t" << m_game->m_window->getRes().w() << " " << m_game->m_window->getRes().h() ;
-        
-    else
-        cout << "\n" << m_inputField() << "\t\tcant be interpreted";
+    if ( ! smtdone )
+        cout << "\n" << m_inputStr() << "\t\tcant be interpreted";
     
 }
 void    Console::  strToWordlist ( const string &  str, vector<Word> &  words )
 {
     words.clear();
     
-    string    inStr     = m_inputField();
+    string    inStr     = m_inputStr();
     Keytype   last_ct   = kt_undef;
     Word *    curr_w    = nullptr;
     
@@ -173,10 +224,8 @@ void    Console::  strToWordlist ( const string &  str, vector<Word> &  words )
             if ( last_ct != kt_char && last_ct != kt_number )
             {
                 // Add new Word to m_inputWords
-                words.push_back( Word() );
+                words.push_back( Word(c) );
                 curr_w = &words.back();
-                curr_w->str += c;
-                curr_w->interpretTypeOfWord();
             }
             else
             {
@@ -190,6 +239,7 @@ void    Console::  strToWordlist ( const string &  str, vector<Word> &  words )
             curr_w = nullptr;
         }
         
+        last_ct = ct ;
     }
     
 }

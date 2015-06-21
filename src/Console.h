@@ -7,6 +7,7 @@ using namespace std;
 #include <vector>
 #include "Key.h"
 #include "Word.h"
+#include "Object.h"
 
 
 class Game;
@@ -14,7 +15,7 @@ class Game;
 
 
 
-class Console
+class Console : public Object
 {
 private:        // PRIVATE ==========================================
                 // VARIABLES ----------------------------------------
@@ -23,7 +24,7 @@ private:        // PRIVATE ==========================================
     bool            m_active;
     Game *          m_game;
                 // FUNCTIONS ----------------------------------------
-    string &        m_inputField();
+    string &        m_inputStr();
     
     void            open();
     void            doToggle();
@@ -34,9 +35,11 @@ private:        // PRIVATE ==========================================
     Keytype         getKeytype ( SDL_KeyboardEvent key );
     void            interpretInput();
     void            strToWordlist ( const string &  str, vector<Word> &  words );
+    
 public:         // PUBLIC ===========================================
                 // FUNCTIONS ----------------------------------------
                     Console( Game *  p_game ) ;
+    virtual        ~Console();
     void            close();
     void            input( SDL_KeyboardEvent key );
     bool            isOpen();

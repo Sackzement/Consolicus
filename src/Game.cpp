@@ -3,67 +3,41 @@
 #include <iostream>
 
 
-        Game::    Game()
+Game::    Game() : Program()
 {
-    create();
+    m_window  = nullptr ;
+    m_console = nullptr ;
 }
-void    Game::    loadStuff()
+void    Game::    init()
 {
-    m_sprites.push_back( new Sprite("ululu.png") );
-}
-void    Game::    mainloop()
-{
-    while ( isRunning() )
+    
+    if ( SDL_Init( SDL_INIT_EVERYTHING ) != 0 )
     {
-        input();
-        
-        //update();
-        
-        //render();
+        cout << "\nError:\t" << SDL_GetError() ;
+        return ;
     }
+    
+    m_console  = new Console(this) ;
+    m_window   = new Window() ;
+    
+    addChild( new Sprite() ) ;
+    addChild( new Sprite("ululu.png") ) ;
+
 }
         Game::   ~Game()
 {
-    destroy();
+    if ( m_window != nullptr )
+        delete  m_window;
+    m_window  = nullptr ;
+    if ( m_console != nullptr )
+        delete  m_console;
+    m_console = nullptr ;
+    
 }
 
-void    Game::    create()
-{
-    m_window   = new Window();
-    m_console  = new Console(this);
-    m_sprites  = vector<Sprite *> ();
-    
-    m_running  = true;
-}
-void    Game::    destroy()
-{
-    delete  m_window;
-    delete  m_console;
-    m_window  = NULL;
-    m_console = NULL;
-    
-    for ( Sprite * sprite : m_sprites )     delete sprite;
-    m_sprites.clear();
-    
-    m_running = false;
-}
-bool    Game::    isRunning()
-{
-    return m_running;
-}
-
-void    Game::    reset()
-{
-    destroy();
-    create();
-}
-void    Game::     quit()
-{
-    cout << "\nGame\tquitting" ;
-    m_running = false;
-}
 void    Game::    input()
 {
+    
     SDL_Event ev;
     while ( SDL_PollEvent(&ev) != 0 )
         
@@ -75,11 +49,21 @@ void    Game::    input()
             break;
             
         case SDL_EventType::SDL_KEYDOWN:
-            if ( ev.key.repeat == 0 )       interpretKey( ev.key );
+            if ( ev.key.repeat == 0 )       inputKeyDown( ev.key );
             break;
     }
+    
 }
-void    Game::    interpretKey( SDL_KeyboardEvent key )
+
+void    Game::    update()
+{
+    
+}
+void    Game::    render()
+{
+    
+}
+void    Game::    inputKeyDown( SDL_KeyboardEvent key )
 {
     if ( key.keysym.sym == SDLK_ESCAPE  &&  ! m_console->isOpen() )
         quit();
