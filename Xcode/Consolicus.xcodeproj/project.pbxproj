@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71D171A1B38C96000E8A1BB /* res in CopyFiles */ = {isa = PBXBuildFile; fileRef = A71D17191B38C94100E8A1BB /* res */; };
 		A7570B2B1B36E01900F77AC5 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7570B291B36E01900F77AC5 /* Program.cpp */; };
 		A77A45F01B31F6FB008AE5D5 /* Consolicus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77A45EB1B31F198008AE5D5 /* Consolicus.cpp */; };
 		A77A46001B31FB94008AE5D5 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77A45F21B31FB94008AE5D5 /* Console.cpp */; };
 		A77A46011B31FB94008AE5D5 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77A45F41B31FB94008AE5D5 /* Game.cpp */; };
 		A77A46021B31FB94008AE5D5 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77A45FA1B31FB94008AE5D5 /* Sprite.cpp */; };
 		A77A46031B31FB94008AE5D5 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77A45FC1B31FB94008AE5D5 /* Window.cpp */; };
+		A79DC2691B38B2AF0056282D /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A79DC2671B38B2AF0056282D /* Transform.cpp */; };
 		A7A9D0DC1B346926003574EE /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7A9D0DB1B346926003574EE /* Object.cpp */; };
 		A7C477EF1B31D24900A76A99 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C477ED1B31D24900A76A99 /* SDL2_image.framework */; };
 		A7C477F01B31D24900A76A99 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C477EE1B31D24900A76A99 /* SDL2.framework */; };
@@ -21,16 +23,18 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		A75FCCB61B319D4F00AECE06 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				A71D171A1B38C96000E8A1BB /* res in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A71D17191B38C94100E8A1BB /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; name = res; path = ../res; sourceTree = "<group>"; };
 		A7570B291B36E01900F77AC5 /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Program.cpp; path = ../src/Program.cpp; sourceTree = "<group>"; };
 		A7570B2A1B36E01900F77AC5 /* Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Program.h; path = ../src/Program.h; sourceTree = "<group>"; };
 		A75FCCB81B319D4F00AECE06 /* Consolicus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Consolicus; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,11 +52,14 @@
 		A77A45FC1B31FB94008AE5D5 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Window.cpp; path = ../src/Window.cpp; sourceTree = "<group>"; };
 		A77A45FD1B31FB94008AE5D5 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = ../src/Window.h; sourceTree = "<group>"; };
 		A77A45FF1B31FB94008AE5D5 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Word.h; path = ../src/Word.h; sourceTree = "<group>"; };
+		A79DC2671B38B2AF0056282D /* Transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Transform.cpp; path = ../src/Transform.cpp; sourceTree = "<group>"; };
+		A79DC2681B38B2AF0056282D /* Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transform.h; path = ../src/Transform.h; sourceTree = "<group>"; };
 		A7A9D0D91B3266C5003574EE /* Script.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Script.h; path = ../src/Script.h; sourceTree = "<group>"; };
 		A7A9D0DA1B33CF5F003574EE /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Object.h; path = ../src/Object.h; sourceTree = "<group>"; };
 		A7A9D0DB1B346926003574EE /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Object.cpp; path = ../src/Object.cpp; sourceTree = "<group>"; };
 		A7C477ED1B31D24900A76A99 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = /Library/Frameworks/SDL2_image.framework; sourceTree = "<absolute>"; };
 		A7C477EE1B31D24900A76A99 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
+		A7CA0BA71B3A167800BE761F /* Tag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Tag.h; path = ../src/Tag.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +78,7 @@
 		A75FCCAF1B319D4F00AECE06 = {
 			isa = PBXGroup;
 			children = (
+				A71D17191B38C94100E8A1BB /* res */,
 				A77A45EB1B31F198008AE5D5 /* Consolicus.cpp */,
 				A77A45F11B31FB5C008AE5D5 /* src */,
 				A77A45EC1B31F22F008AE5D5 /* frameworks */,
@@ -116,6 +124,9 @@
 				A77A45FF1B31FB94008AE5D5 /* Word.h */,
 				A77A45F81B31FB94008AE5D5 /* myvararg.h */,
 				A7A9D0D91B3266C5003574EE /* Script.h */,
+				A79DC2681B38B2AF0056282D /* Transform.h */,
+				A79DC2671B38B2AF0056282D /* Transform.cpp */,
+				A7CA0BA71B3A167800BE761F /* Tag.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -178,6 +189,7 @@
 			files = (
 				A77A46011B31FB94008AE5D5 /* Game.cpp in Sources */,
 				A77A46031B31FB94008AE5D5 /* Window.cpp in Sources */,
+				A79DC2691B38B2AF0056282D /* Transform.cpp in Sources */,
 				A7570B2B1B36E01900F77AC5 /* Program.cpp in Sources */,
 				A7A9D0DC1B346926003574EE /* Object.cpp in Sources */,
 				A77A45F01B31F6FB008AE5D5 /* Consolicus.cpp in Sources */,

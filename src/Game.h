@@ -17,21 +17,23 @@ class Game : public Program
     
     friend class Console;
     
-private:    // PRIVATE ==========================================
-            // VARIABLES ----------------------------------------
-    Window  *   m_window;
-    Console *   m_console;
-            // FUNCTIONS ----------------------------------------
-    void        create();
-    void        destroy();
+public:
+                Game();
+    virtual    ~Game();
+    
+private:
     void        init();
     void        input();
     void        update();
     void        render();
+    
     void        inputKeyDown( SDL_KeyboardEvent key );
-public:
-                Game();
-    virtual    ~Game();
+    
+    
+    
+    Window  *   m_window;
+    Console *   m_console;
+
 
 };
 

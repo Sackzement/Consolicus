@@ -16,40 +16,44 @@ enum Objecttype
 };
 
 
-
-
-
 class Object
 {
     
-    string              m_name;
-    Objecttype          m_type;
-
-    Object *            m_parent;
-    vector<Object*>     m_children;
-    
 public:
-		Object( Objecttype t );
+                Object( Objecttype t );
 virtual        ~Object();
-private:
-    void        deleteAllChildren();
-public:
+    
+virtual void    printData();
+    Object *    addChild    ( Object *  ch ) ;
+    Object *	getChild    ( string name ) ;
+    Object *	getChild    ( Objecttype type ) ;
+    void        removeChild ( Object *  ch ) ;
+    
     string      getName     () ;
     Objecttype  getType     () ;
     string      getTypeStr  () ;
     Object *    getParent   () ;
-    Object *	getChild    ( string name );
-    Object *	getChild   ( Objecttype type );
 
     void        setName     ( string name ) ;
     void        setParent   ( Object *  par ) ;
-    Object *    addChild    ( Object *  ch ) ;
-    void        removeChild ( Object *  ch ) ;
+    
+protected:
+    void                printNameAndType();
+    void                printParentAndChildren();
+    vector<Object*> &   getChildren();
+    
+private:
+    void        deleteAllChildren();
+    
+    
+    
+    string              m_name;
+    Objecttype          m_type;
+    
+    Object *            m_parent;
+    vector<Object*>     m_children;
     
 };
-
-
-
 
 
 class ObjectManager
@@ -57,13 +61,16 @@ class ObjectManager
     static vector<Object*> m_objects ;
 public:
     static void    printAll      () ;
+    static string  genName       ( Objecttype t ) ;
+    
     static void    addObject     ( Object *  obj ) ;
+    static Object* getObject     ( string name ) ;
     static void    removeObject  ( Object *  obj ) ;
+    
+    
     static void    deleteObject  ( Object *  obj ) ;
     static void    deleteObject  ( string name ) ;
     static void    deleteAll     () ;
     static void    deleteAll     (Objecttype type) ;
     static void    deleteAllBut  () ;
-    static string  genName       ( Objecttype t ) ;
-    static Object* getObject     ( string name ) ;
 };

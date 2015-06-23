@@ -27,4 +27,25 @@ dependencies: \
   /Library/Frameworks/SDL2.framework/Headers/SDL_touch.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Key.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Word.h \
-  /Users/piit/Wolke/Development/Projects/Consolicus/src/Object.h
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/Object.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_main.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_assert.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_atomic.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_audio.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_endian.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_mutex.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_thread.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_clipboard.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_cpuinfo.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_filesystem.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_haptic.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_hints.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_loadso.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_log.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_messagebox.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_power.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_render.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_system.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_timer.h \
+  /Library/Frameworks/SDL2.framework/Headers/SDL_version.h

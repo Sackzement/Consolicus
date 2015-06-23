@@ -3,38 +3,36 @@
 #include <iostream>
 
 
-Game::    Game() : Program()
+        Game::    Game() : Program()
 {
     m_window  = nullptr ;
     m_console = nullptr ;
 }
-void    Game::    init()
-{
-    
-    if ( SDL_Init( SDL_INIT_EVERYTHING ) != 0 )
-    {
-        cout << "\nError:\t" << SDL_GetError() ;
-        return ;
-    }
-    
-    m_console  = new Console(this) ;
-    m_window   = new Window() ;
-    
-    addChild( new Sprite() ) ;
-    addChild( new Sprite("ululu.png") ) ;
-
-}
         Game::   ~Game()
 {
+    
     if ( m_window != nullptr )
         delete  m_window;
     m_window  = nullptr ;
+    
     if ( m_console != nullptr )
         delete  m_console;
     m_console = nullptr ;
     
 }
 
+
+void    Game::    init()
+{
+    setFPS(60);
+    
+    m_console  = new Console(this) ;
+    m_window   = new Window() ;
+    
+    m_window->addChild( new Sprite("res/ululu.bmp") ) ;
+    m_window->addChild( new Sprite("res/cat.png") ) ;
+
+}
 void    Game::    input()
 {
     
@@ -43,30 +41,34 @@ void    Game::    input()
         
     switch(ev.type)
     {
-        // INPUT ---------------------------------------
         case SDL_EventType::SDL_QUIT:
             quit();
             break;
             
         case SDL_EventType::SDL_KEYDOWN:
-            if ( ev.key.repeat == 0 )       inputKeyDown( ev.key );
+            inputKeyDown( ev.key );
             break;
     }
     
 }
-
 void    Game::    update()
 {
     
 }
 void    Game::    render()
 {
-    
+    m_window->render();
 }
+
+
 void    Game::    inputKeyDown( SDL_KeyboardEvent key )
 {
+    
+    if ( key.repeat != 0 )  return;
+    
     if ( key.keysym.sym == SDLK_ESCAPE  &&  ! m_console->isOpen() )
         quit();
     else
         m_console->input( key );
+    
 }

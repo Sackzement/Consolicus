@@ -1,0 +1,67 @@
+interactive editor
+Input Console					// Shows InputString		/KeySequence /Keystate
+Enter -> Script input
+
+options:
+
+List things:
+Filesystem / loadable from script
+SCRIPT "list textures"  / all /data / levels / audio / 
+Game
+SCRIPT "list objects"
+
+-load things:	
++SCRIPT "load fileName"		//object is selected
+
+
+
+-select Object
+
+	+SCRIPT "select objectname"
+	+ with mouse click, rect gesture
+
+-change Object
+
+	Textures:
+		States:		move scale rotate
+				  -with mouse  / finesse
+				  -with arrow keys						// const increment of var  exp:  Camera
+				   SCRIPT "pos x y"  					/  "size x y" "rotate a"	// präziese
+		SCRIPT "rueck" "vor"  							// plazier textur hinter erste textur die abgedeck wird
+		SCRIPT "delete"
+
+SCRIPT "select option 1"  	2/3/4						// ex: Buttons- start options quit
+SCRIPT "quit" 
+SCRIPT "window res x y"
+SCRIPT "fullscreen toggle"
+SCRIPT "delete obj"
+SCRIPT "save someth"
+SCRIPT "audio 100"  				//   volume/audio   at max
+		vol/volume 100
+
+SCRIPT "set window bkg black" 		// white
+
+
+
+Keyboard Support
+
+Scancode vs Keycode
+Layout   vs Character
+scancode vs sym
+
+GetKeyboardState
+Keysum -> scancode			
+		  sym
+		  mod
+		  
+SDL_KeyboardEvent
+SDL_StartTextInput()
+SDL_SetTextInputRect
+SDL_StopTextInput
+SDL_TextInputEvent
+SDL_TextEditingEvent
+
+SDL_MouseButtonEvent
+SDL_MouseMotionEvent
+SDL_MouseWheelEvent
+SDL_MultiGestureEvent

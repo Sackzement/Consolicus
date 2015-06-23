@@ -150,7 +150,7 @@ void    Console::  interpretInput()
             {
                 if ( s == 1 )
                 {
-                    m_game->m_window->printSettings();
+                    m_game->m_window->printData();
                     smtdone = true;
                 }
                 if ( s == 2)
@@ -196,6 +196,12 @@ void    Console::  interpretInput()
             else if ( words[i].str == "db" && s == 1 )
             {
                 ObjectManager::deleteAllBut() ;
+                smtdone = true ;
+            }
+            else if ( words[i].str == "pa" && s == 1 )
+            {
+                m_game->printData() ;
+                m_game->m_window->printData() ;
                 smtdone = true ;
             }
             

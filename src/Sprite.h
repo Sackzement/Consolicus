@@ -4,6 +4,7 @@
 #include <string>
 #include "Size.h"
 #include "Object.h"
+#include "Transform.h"
 using namespace std;
 
 
@@ -11,29 +12,23 @@ using namespace std;
 
 
 
-class Sprite : public Object
+class Sprite : public Object , public Transform
 {
-private:    // PRIVATE ======================
-    // VARIABLES --------------------
-    SDL_Surface *   m_sdlSurface;
-    // FUNCTIONS --------------------
-    void            create          ( string filename ) ;
-    void            create          ( int w = 1, int h = 1 ) ;
-    bool            existsSdlSurface ();
-public:     // PUBLIC =======================
-    // FUNCTIONS --------------------
+public:
+    
                     Sprite          ( string filename ) ;
                     Sprite          ( int w = 1, int h = 1 ) ;
     virtual        ~Sprite          ();
     
-    /*void            show            ();
+    void            renderTo        ( SDL_Surface *  renSurf );
+virtual void        printData       ();
+  /*void            show            ();
     void            hide            ();*/
     
-    void            printData       ();
+private:
+    bool            existsSdlSurface ();
     
-    SizeRect        getSize         ();
-    /*
-    void            setRes          ( int w, int h );*/
-    
+    SDL_Surface *   m_sdlSurface;
+
 };
 

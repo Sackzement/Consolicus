@@ -52,4 +52,5 @@ dependencies: \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Window.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Size.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Sprite.h \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/Transform.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Program.h

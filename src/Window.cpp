@@ -1,21 +1,68 @@
 #include "Window.h"
 #include <iostream>
 #include <SDL2/SDL.h>
+#include "Sprite.h"
 
 
 Window::             Window     () : Object(ot_window)
 {
-    create();
+    
+    if ( ! SDL_WasInit(SDL_INIT_VIDEO) )
+    {
+        if ( SDL_InitSubSystem(SDL_INIT_VIDEO) != 0 )
+        {
+            cout << "\nError:\t" << SDL_GetError() ;
+            return ;
+        }
+    }
+    
+    m_sdlWin = SDL_CreateWindow ( "ululu", 0, 0, 400, 300, SDL_WindowFlags::SDL_WINDOW_SHOWN );
+    
+    if( ! existsSdlWindow() )
+        cout << "\nCreateWindow failed:\t", SDL_GetError() ;
+    
 }
 Window::            ~Window     ()
 {
-    destroy();
+    SDL_DestroyWindow(m_sdlWin);
+    m_sdlWin = nullptr;
 }
 
-void     Window::    reset      ()
+
+void     Window::    render     ()
 {
-    destroy();
-    create();
+    
+    if ( ! existsSdlWindow() )     return;
+    
+    vector<Object*>& chs = getChildren();
+    for ( Object* obj : chs )
+    {
+        if ( obj->getType() == ot_sprite )
+        {
+            Sprite* sp = (Sprite*)obj;
+            sp->renderTo( SDL_GetWindowSurface(m_sdlWin) ) ;
+        }
+    }
+    
+    SDL_UpdateWindowSurface( m_sdlWin );
+    
+}
+void     Window::    printData()
+{
+    
+    printNameAndType();
+    
+    
+    if ( existsSdlWindow() )
+    {
+        cout << '\n' << getTitle() ;
+    
+        SizeRect size = getRes();
+        cout << '\n' << size.w() << " " << size.h() ;
+    }
+    
+    printParentAndChildren() ;
+    
 }
 void     Window::    show       ()
 {
@@ -31,22 +78,6 @@ void     Window::    hide       ()
     cout << "\nWindow\thiding" ;
     SDL_HideWindow(m_sdlWin);
 }
-
-void     Window::    printSettings()
-{
-    if ( ! existsSdlWindow() )
-    {
-        cout << "\nm_sdlWindow\t== NULL" ;
-        return;
-    }
-    
-    cout << "\nWindow Settings" ;
-    cout << "\nTitle\t" << getTitle() ;
-    
-    SizeRect size = getRes();
-    cout << "\nResolution\t" << size.w() << " " << size.h() ;
-}
-
 string   Window::    getTitle   ()
 {
     string ret = "";
@@ -72,6 +103,7 @@ SizeRect Window::    getRes     ()
     return res;
 }
 
+
 void     Window::    setTitle   ( string t )
 {
     if ( ! existsSdlWindow() )
@@ -88,23 +120,11 @@ void     Window::    setRes     ( int w, int h )
 }
 
 
-void     Window::    create     ()
-{
-    if ( ! SDL_WasInit(SDL_INIT_VIDEO) )     SDL_InitSubSystem(SDL_INIT_VIDEO) ;
-    
-    m_sdlWin = SDL_CreateWindow ( "ululu", 0, 0, 400, 300, SDL_WindowFlags::SDL_WINDOW_SHOWN );
-    
-    if( ! existsSdlWindow() )
-        cout << "\nCreateWindow failed:\t", SDL_GetError() ;
 
-}
-void     Window::    destroy    ()
+bool     Window::    existsSdlWindow()
 {
-    SDL_DestroyWindow(m_sdlWin);
-    m_sdlWin = NULL;
+    if ( m_sdlWin != nullptr )  return true;
+    else                        return false;
 }
-bool     Window::existsSdlWindow()
-{
-    if ( m_sdlWin )  return true;
-    else             return false;
-}
+
+

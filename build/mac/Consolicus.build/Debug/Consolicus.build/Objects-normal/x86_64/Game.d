@@ -49,6 +49,7 @@ dependencies: \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Size.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Object.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Sprite.h \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/Transform.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Console.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Key.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Word.h \

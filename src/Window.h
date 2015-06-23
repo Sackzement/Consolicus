@@ -14,29 +14,27 @@ using namespace std;
 
 class Window : public Object
 {
-private:    // PRIVATE ======================
-            // VARIABLES --------------------
-    SDL_Window *    m_sdlWin;
-            // FUNCTIONS --------------------
-    void            create          ();
-    void            destroy         ();
-    bool            existsSdlWindow ();
-public:     // PUBLIC =======================
-            // FUNCTIONS --------------------
+    
+public:
                     Window          ();
     virtual        ~Window          ();
     
-    void            reset           ();
+    void            render          ();
+virtual void        printData       ();
     void            show            ();
     void            hide            ();
-    
-    void            printSettings   ();
-    
     string          getTitle        ();
     SizeRect        getRes          ();
     
     void            setTitle        ( string t );
     void            setRes          ( int w, int h );
+    
+private:
+    bool            existsSdlWindow ();
+    
+    
+    
+    SDL_Window *    m_sdlWin;
     
 };
 
