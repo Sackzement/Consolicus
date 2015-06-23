@@ -1,0 +1,91 @@
+﻿Build started 18.06.2015 04:08:56.
+     1>Project "c:\Wolke\Development\Projects\Consolicus\VisualC\Consolicus.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Consolicus.cpp ..\src\Console.cpp ..\src\Game.cpp ..\src\Sprite.cpp ..\src\Window.cpp
+         Window.cpp
+         Sprite.cpp
+         Game.cpp
+         Console.cpp
+         Consolicus.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Wolke\Development\Projects\Consolicus\VisualC\Debug\Consolicus.exe" /INCREMENTAL /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Wolke\Development\Projects\Consolicus\VisualC\Debug\Consolicus.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Wolke\Development\Projects\Consolicus\VisualC\Debug\Consolicus.lib" /MACHINE:X86 /verbose:lib Debug\Consolicus.obj
+         Debug\Console.obj
+         Debug\Game.obj
+         Debug\Sprite.obj
+         Debug\Window.obj
+         
+         Searching libraries
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2.lib:
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2main.lib:
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2_image.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winspool.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\comdlg32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\advapi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\shell32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\ole32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\odbc32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\odbccp32.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\msvcprtd.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\MSVCRTD.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\OLDNAMES.lib:
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2.lib:
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2main.lib:
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2_image.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winspool.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\comdlg32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\advapi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\shell32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\ole32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\odbc32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\odbccp32.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\msvcprtd.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\MSVCRTD.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\OLDNAMES.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\msvcrt.lib:
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2.lib:
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2main.lib:
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2_image.lib:
+         
+         Finished searching libraries
+     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+         
+         Searching libraries
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2.lib:
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2main.lib:
+             Searching C:\Wolke\Development\libraries\dev libs\win32bit\SDL2_image.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\kernel32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\user32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\gdi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\winspool.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\comdlg32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\advapi32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\shell32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\ole32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\oleaut32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\uuid.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\odbc32.lib:
+             Searching C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86\odbccp32.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\msvcprtd.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\MSVCRTD.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\OLDNAMES.lib:
+             Searching C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\msvcrt.lib:
+         
+         Finished searching libraries
+     1>SDL2main.lib(SDL_windows_main.obj) : error LNK2019: unresolved external symbol _SDL_main referenced in function _main
+     1>C:\Wolke\Development\Projects\Consolicus\VisualC\Debug\Consolicus.exe : fatal error LNK1120: 1 unresolved externals
+     1>Done Building Project "c:\Wolke\Development\Projects\Consolicus\VisualC\Consolicus.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.28

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\Consolicus.cpp" />
+    <ClCompile Include="..\src\Console.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Game.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Sprite.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Window.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{df6a6c25-1a19-46e8-96be-423aebf42c01}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\Console.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Game.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Key.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Mask.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\myvararg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Size.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Sprite.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Window.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Word.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
