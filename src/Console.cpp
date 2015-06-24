@@ -18,6 +18,12 @@
     
     m_game = p_game;
     m_active = false;
+    
+    m_tags = map<string,tag> () ;
+    
+    
+    loadTags();
+    
 }
         Console:: ~Console()
 {
@@ -27,6 +33,8 @@
     
     m_active = false ;
     m_game   = nullptr ;
+    
+    m_tags.clear();
     
 }
 void    Console::  close()
@@ -41,6 +49,11 @@ string& Console::  m_inputStr()
     return m_strings.top();
 }
 
+void    Console::  loadTags  ()
+{
+    //tag t_game  = m_game;
+    m_tags["game"] = m_game;
+}
 void    Console::  open ()
 {
     if ( m_active )  return;
@@ -230,7 +243,7 @@ void    Console::  strToWordlist ( const string &  str, vector<Word> &  words )
             if ( last_ct != kt_char && last_ct != kt_number )
             {
                 // Add new Word to m_inputWords
-                words.push_back( Word(c) );
+                words.push_back( Word( to_string(c) ) );
                 curr_w = &words.back();
             }
             else

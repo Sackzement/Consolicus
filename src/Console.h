@@ -2,13 +2,14 @@
 
 #include <string>
 #include <stack>
-using namespace std;
-#include <SDL2/SDL_events.h>
 #include <vector>
 #include <map>
+using namespace std;
+#include <SDL2/SDL_events.h>
 #include "Key.h"
 #include "Word.h"
 #include "Object.h"
+#include "tag.h"
 
 
 class Game;
@@ -27,6 +28,7 @@ public:
     bool            isOpen();
     
 private:
+    void            loadTags();
     void            open();
     void            doToggle();
     void            addKey( SDL_KeyboardEvent key ) ;
@@ -38,10 +40,10 @@ private:
     void            strToWordlist ( const string &  str, vector<Word> &  words );
     
     
-    string &        m_inputStr();
+    string &           m_inputStr();
     // wordsToFunction datatype
-    stack<string>   m_strings;
-    bool            m_active;
-    Game *          m_game;
-    //map<string, >
+    stack<string>      m_strings;
+    bool               m_active;
+    Game *             m_game;
+    map<string,tag>    m_tags;
 };

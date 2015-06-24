@@ -59,7 +59,7 @@
 		A7A9D0DB1B346926003574EE /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Object.cpp; path = ../src/Object.cpp; sourceTree = "<group>"; };
 		A7C477ED1B31D24900A76A99 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = /Library/Frameworks/SDL2_image.framework; sourceTree = "<absolute>"; };
 		A7C477EE1B31D24900A76A99 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
-		A7CA0BA71B3A167800BE761F /* Tag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Tag.h; path = ../src/Tag.h; sourceTree = "<group>"; };
+		A7CA0BA71B3A167800BE761F /* tag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tag.h; path = ../src/tag.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +112,7 @@
 				A7570B291B36E01900F77AC5 /* Program.cpp */,
 				A77A45F51B31FB94008AE5D5 /* Game.h */,
 				A77A45F41B31FB94008AE5D5 /* Game.cpp */,
+				A7CA0BA71B3A167800BE761F /* tag.h */,
 				A77A45F31B31FB94008AE5D5 /* Console.h */,
 				A77A45F21B31FB94008AE5D5 /* Console.cpp */,
 				A77A45FD1B31FB94008AE5D5 /* Window.h */,
@@ -126,7 +127,6 @@
 				A7A9D0D91B3266C5003574EE /* Script.h */,
 				A79DC2681B38B2AF0056282D /* Transform.h */,
 				A79DC2671B38B2AF0056282D /* Transform.cpp */,
-				A7CA0BA71B3A167800BE761F /* Tag.h */,
 			);
 			name = src;
 			sourceTree = "<group>";

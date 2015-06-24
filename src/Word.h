@@ -30,11 +30,6 @@ public:
         str = s;
         interpretTypeOfWord();
     }
-    Word(char c)
-    {
-        str = c;
-        interpretTypeOfWord();
-    }
 private:
     Wordtype interpretTypeOfWord()
     {

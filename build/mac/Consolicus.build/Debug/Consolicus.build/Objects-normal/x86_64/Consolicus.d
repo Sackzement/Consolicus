@@ -53,6 +53,7 @@ dependencies: \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Console.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Key.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Word.h \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/tag.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Program.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/myvararg.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Script.h

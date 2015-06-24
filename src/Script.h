@@ -30,7 +30,7 @@ public:
     }
     Script &  operator << (char c)
     {
-        Word w = Word(c) ;
+        Word w = Word( to_string(c) ) ;
         m_words.push_back(w) ;
         
         return *this;
