@@ -16,7 +16,7 @@ enum Keytype
     kt_number,
 };
 
-
+typedef Sint32  kb_key;
 
 enum Key
 {

@@ -20,7 +20,8 @@ public:
     virtual        ~Window          ();
     
     void            render          ();
-virtual void        printData       ();
+    virtual void    printData       ();
+    virtual void    printData2      ();
     void            show            ();
     void            hide            ();
     string          getTitle        ();
@@ -28,6 +29,7 @@ virtual void        printData       ();
     
     void            setTitle        ( string t );
     void            setRes          ( int w, int h );
+    void            toggleFullScreen();
     
 private:
     bool            existsSdlWindow ();

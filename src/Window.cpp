@@ -16,7 +16,7 @@ Window::             Window     () : Object(ot_window)
         }
     }
     
-    m_sdlWin = SDL_CreateWindow ( "ululu", 0, 0, 400, 300, SDL_WindowFlags::SDL_WINDOW_SHOWN );
+    m_sdlWin = SDL_CreateWindow ( "ululu", 0, 0, 400, 300, SDL_WINDOW_SHOWN );
     
     if( ! existsSdlWindow() )
         cout << "\nCreateWindow failed:\t", SDL_GetError() ;
@@ -64,6 +64,28 @@ void     Window::    printData()
     printParentAndChildren() ;
     
 }
+void     Window::    printData2()
+{
+    
+    
+    if ( existsSdlWindow() )
+    {
+        const char * dataptr = nullptr;
+        
+        SDL_GetWindowData (m_sdlWin, dataptr);
+        
+        if ( dataptr != nullptr )
+            cout << "\n" << *dataptr;
+        else
+            cout << "\n windata == nullptr";
+        
+        
+        
+    }
+    
+}
+
+
 void     Window::    show       ()
 {
     if ( ! existsSdlWindow() )     return;
@@ -118,7 +140,22 @@ void     Window::    setRes     ( int w, int h )
     
     SDL_SetWindowSize(m_sdlWin, w, h);
 }
-
+void     Window::    toggleFullScreen ()
+{
+    if ( ! existsSdlWindow() )
+        return;
+    
+    Uint32 flags =  SDL_GetWindowFlags(m_sdlWin);
+    Uint32 newflag;
+    
+    if( (flags & SDL_WINDOW_FULLSCREEN) || (flags & SDL_WINDOW_FULLSCREEN_DESKTOP) )
+        newflag = 0;
+    else
+        newflag = SDL_WINDOW_FULLSCREEN_DESKTOP;
+        
+    SDL_SetWindowFullscreen(m_sdlWin, newflag);        // SDL_WINDOW_FULLSCREEN  or SDL_WINDOW_FULLSCREEN_DESKTOP  or  0
+    //m_sdlWin->
+}
 
 
 bool     Window::    existsSdlWindow()

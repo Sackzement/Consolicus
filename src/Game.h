@@ -6,6 +6,7 @@
 #include "Sprite.h"
 #include "Console.h"
 #include "Program.h"
+#include "Key.h"
 
 
 
@@ -27,7 +28,8 @@ private:
     void        update();
     void        render();
     
-    void        inputKeyDown( SDL_KeyboardEvent key );
+    void        inputKeyDown( SDL_KeyboardEvent sdlKeyEv );
+    void        fingerEvent( SDL_TouchFingerEvent tfEv );
     
     
     

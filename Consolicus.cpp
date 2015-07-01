@@ -1,23 +1,22 @@
-#include "src/Game.h"
-#include "src/myvararg.h"
+#include "Game.h"
 #include "Script.h"
 #include "Object.h"
+#include "myvararg.h"
+
+//#include "bench.h"
+#include "mythread.h"
+#include "16_true_type_fonts.h"
 
 
 
-int main(int argc, const char * argv[])
+int main(const int argc, const char ** argv)
 {
-    simple_printf("dcff", 3, 'a', 1.999, 42.5);
-    FindMax(4, 3, 6, 7, 4);
-    
-    Script sc = Script() ;
-    sc << Word("upp") ;
-    
-    Game* game = new Game();
-    
-    game->run();
-    
-    delete game;
+    int m = mainFunc(argc, argv);
+    cout << m;
+    Game game;
+    game.run();
     
     return 0;
+    
 }
+

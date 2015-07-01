@@ -49,14 +49,29 @@ public:
         
     }
     
-    tag ( tag const &  t )              {
+   ~tag ()    noexcept  {
+        
+        reset();
+        
+    }
+    
+    tag              ( tag const &  t )         {
         
         m_type      = t.type;
         m_object    = t.object;
         m_function  = t.function;
         
     }
-    tag ( tag &&       t )    noexcept  {
+    tag &  operator= ( tag const &  t )         {
+        
+        tag tmp(t);
+        *this = move(tmp);
+        
+        return *this;
+        
+    }
+    
+    tag              ( tag &&  t )    noexcept  {
         
         m_type      = t.type;
         m_object    = t.object;
@@ -65,39 +80,25 @@ public:
         t.reset();
         
     }
-    
-    tag ( Object * const &  o )         {
-        
-        *this  = o;
-        
-    }
-    tag ( fp_vv    const &  f )         {
-        
-        *this  = f;
-        
-    }
-    
-   ~tag ()    noexcept  {
-        
-        reset();
-        
-    }
-
-    tag &  operator= ( tag const &  t  )              {
-        
-        tag tmp(t);
-        *this = move(tmp);
-        
-        return *this;
-        
-    }
-    tag &  operator= ( tag &&       t  )    noexcept  {
+    tag &  operator= ( tag &&  t )    noexcept  {
         
         swap( m_type, t.m_type ) ;
         swap( m_object, t.m_object ) ;
         swap( m_function, t.m_function ) ;
         
         return *this;
+        
+    }
+    
+    
+    tag ( Object * const &  o )    {
+        
+        *this  = o;
+        
+    }
+    tag ( fp_vv    const &  f )    {
+        
+        *this  = f;
         
     }
     

@@ -24,14 +24,14 @@ public:
     virtual        ~Console();
     
     void            close();
-    void            input( SDL_KeyboardEvent key ) ;
+    void            input( kb_key key ) ;
     bool            isOpen();
     
 private:
     void            loadTags();
     void            open();
     void            doToggle();
-    void            addKey( SDL_KeyboardEvent key ) ;
+    void            addKey( kb_key key ) ;
     void            removeKey();
     void            printInput();
     Keytype         getKeytype ( char key ) ;

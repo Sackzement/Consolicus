@@ -1,6 +1,7 @@
 #include "Console.h"
 #include "Game.h"
 #include <iostream>
+#include <cctype>
 #include "Word.h"
 #include "Object.h"
 
@@ -61,17 +62,15 @@ void    Console::  open ()
     m_active = true;
     cout << "\nConsole\topened" ;
 }
-void    Console::  input ( SDL_KeyboardEvent key )
+void    Console::  input ( kb_key key )
 {
-    if ( getKeytype(key) == kt_undef )   return;
-    if ( getKeytype(key) == kt_exiter )                     return close();
-    
-    if ( getKeytype(key) == kt_toggle )                     return doToggle();
+    if ( key == k_esc )         return close();
+    if ( key == k_enter )       return doToggle();
     
     if ( m_active )
     {
-        if ( getKeytype(key) == kt_char )                    addKey(key);
-        if ( getKeytype(key) == kt_deletelast )             removeKey();
+        if ( isalnum(key) )     addKey(key);
+        if ( key == k_backspace )             removeKey();
         
         printInput();
     }
@@ -92,9 +91,10 @@ void    Console::  doToggle()
     m_strings.push( "" );
     
 }
-void    Console::  addKey( SDL_KeyboardEvent key )
+void    Console::  addKey( kb_key key )
 {
-    m_inputStr() += key.keysym.sym;
+    m_inputStr() += key;
+    //m_inputStr() += key.keysym.sym;
 }
 void    Console::  removeKey()
 {
@@ -243,7 +243,7 @@ void    Console::  strToWordlist ( const string &  str, vector<Word> &  words )
             if ( last_ct != kt_char && last_ct != kt_number )
             {
                 // Add new Word to m_inputWords
-                words.push_back( Word( to_string(c) ) );
+                words.push_back( Word( string(1,c) ) );
                 curr_w = &words.back();
             }
             else

@@ -2,9 +2,9 @@
 and may not be redistributed without written permission.*/
 
 //Using SDL, SDL_image, SDL_ttf, standard IO, math, and strings
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
+#include <SDL2/SDL.h>
+#include <SDL2_image/SDL_image.h>
+#include <SDL2_ttf/SDL_ttf.h>
 #include <stdio.h>
 #include <string>
 #include <cmath>
@@ -291,7 +291,7 @@ bool loadMedia()
 	bool success = true;
 
 	//Open the font
-	gFont = TTF_OpenFont( "16_true_type_fonts/lazy.ttf", 28 );
+	gFont = TTF_OpenFont( "res/lazy.ttf", 28 );
 	if( gFont == NULL )
 	{
 		printf( "Failed to load lazy font! SDL_ttf Error: %s\n", TTF_GetError() );
@@ -332,7 +332,7 @@ void close()
 	SDL_Quit();
 }
 
-int mainFunc( int argc, char* args[] )
+int mainFunc( int argc, const char** args )
 {
 	//Start up SDL and create window
 	if( !init() )
