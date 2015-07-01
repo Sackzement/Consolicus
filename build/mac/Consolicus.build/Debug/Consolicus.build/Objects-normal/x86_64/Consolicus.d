@@ -57,7 +57,7 @@ dependencies: \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Program.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/Script.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/myvararg.h \
-  /Users/piit/Wolke/Development/Projects/Consolicus/Xcode/mythread.h \
+  /Users/piit/Wolke/Development/Projects/Consolicus/src/mythread.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/types.h \
   /Users/piit/Wolke/Development/Projects/Consolicus/src/16_true_type_fonts.h \
   /Library/Frameworks/SDL2_image.framework/Headers/SDL_image.h \

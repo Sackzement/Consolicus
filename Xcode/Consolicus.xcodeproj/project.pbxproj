@@ -58,6 +58,7 @@
 		A77A45FC1B31FB94008AE5D5 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Window.cpp; path = ../src/Window.cpp; sourceTree = "<group>"; };
 		A77A45FD1B31FB94008AE5D5 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = ../src/Window.h; sourceTree = "<group>"; };
 		A77A45FF1B31FB94008AE5D5 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Word.h; path = ../src/Word.h; sourceTree = "<group>"; };
+		A78DEE281B44B3DE00FE9D1F /* mythread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mythread.h; path = ../src/mythread.h; sourceTree = "<group>"; };
 		A79DC2671B38B2AF0056282D /* Transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Transform.cpp; path = ../src/Transform.cpp; sourceTree = "<group>"; };
 		A79DC2681B38B2AF0056282D /* Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transform.h; path = ../src/Transform.h; sourceTree = "<group>"; };
 		A7A9D0D91B3266C5003574EE /* Script.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Script.h; path = ../src/Script.h; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		A7C477ED1B31D24900A76A99 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = /Library/Frameworks/SDL2_image.framework; sourceTree = "<absolute>"; };
 		A7C477EE1B31D24900A76A99 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = /Library/Frameworks/SDL2.framework; sourceTree = "<absolute>"; };
 		A7CA0BA71B3A167800BE761F /* tag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tag.h; path = ../src/tag.h; sourceTree = "<group>"; };
-		A7E254721B3D339100B0EC33 /* mythread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mythread.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +116,7 @@
 		A77A45F11B31FB5C008AE5D5 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				A78DEE281B44B3DE00FE9D1F /* mythread.h */,
 				A76AA4AD1B44320800FF187E /* 16_true_type_fonts.h */,
 				A7A9D0DA1B33CF5F003574EE /* Object.h */,
 				A7A9D0DB1B346926003574EE /* Object.cpp */,
@@ -139,7 +140,6 @@
 				A79DC2681B38B2AF0056282D /* Transform.h */,
 				A79DC2671B38B2AF0056282D /* Transform.cpp */,
 				A70835DD1B3B853A00C78111 /* bench.h */,
-				A7E254721B3D339100B0EC33 /* mythread.h */,
 				A70A91BD1B3F1F4100F91EE5 /* types.h */,
 			);
 			name = src;

@@ -6,7 +6,7 @@
 <string>Apple LLVM version 6.1.0 (clang-602.0.53) (based on LLVM 3.6.0svn)</string>
  <key>files</key>
  <array>
-  <string>/Users/piit/Wolke/Development/Projects/Consolicus/Xcode/mythread.h</string>
+  <string>/Users/piit/Wolke/Development/Projects/Consolicus/src/mythread.h</string>
  </array>
  <key>diagnostics</key>
  <array>
