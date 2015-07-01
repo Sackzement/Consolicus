@@ -23,7 +23,7 @@
 }
 
 
-void    Game::    init()
+void    Game::    init() //
 {
     setFPS(60);
     
