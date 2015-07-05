@@ -1,18 +1,14 @@
 #include "Game.h"
 #include "Script.h"
 #include "Object.h"
-#include "myvararg.h"
-
-//#include "bench.h"
-#include "mythread.h"
-#include "16_true_type_fonts.h"
+//#include "hello_box2d.h"
+//#include "tobi.h"
 
 
 
-int main(const int argc, const char ** argv)
+int main(const int argc, char ** argv)
 {
-    int m = mainFunc(argc, argv);
-    cout << m;
+    //int m = mainFunc(argc, argv);
     Game game;
     game.run();
     

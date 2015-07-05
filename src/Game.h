@@ -7,6 +7,7 @@
 #include "Console.h"
 #include "Program.h"
 #include "Key.h"
+#include "tobi.h"
 
 
 
@@ -35,6 +36,7 @@ private:
     
     Window  *   m_window;
     Console *   m_console;
+    Tobi *      m_tobi;
 
 
 };

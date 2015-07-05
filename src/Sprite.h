@@ -8,9 +8,10 @@
 using namespace std;
 
 
-
-
-
+/*
+getPixel(x,y)
+setPixel(x,y)
+*/
 
 class Sprite : public Object , public Transform
 {
@@ -25,10 +26,16 @@ virtual void        printData       ();
   /*void            show            ();
     void            hide            ();*/
     
-private:
+    
+protected:
+    SDL_Surface *   m_sdlSurface;
+    Uint32            getPixel ( uint x, uint y );
+    Uint32            setPixel ( uint x, uint y, Uint32 col );
+    Uint32*           pixel;
+    
+    
     bool            existsSdlSurface ();
     
-    SDL_Surface *   m_sdlSurface;
 
 };
 

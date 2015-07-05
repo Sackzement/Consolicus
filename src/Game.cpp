@@ -29,11 +29,16 @@ void    Game::    init() //
     
     m_console  = new Console(this) ;
     m_window   = new Window() ;
+    m_tobi     = new Tobi();
+    m_tobi->pos = Vector3pos(0,0,0);
+    //m_tobi->pos
     
-    m_window->setRes(2880, 1800);
+    //m_window->setRes(2880, 1800);
+    m_window->setRes(800, 600);
     
-    m_window->addChild( new Sprite("res/ululu.bmp") ) ;
-    m_window->addChild( new Sprite("res/cat.png") ) ;
+    //m_window->addChild( new Sprite("res/ululu.bmp") ) ;
+    //m_window->addChild( new Sprite("res/cat.png") ) ;
+    m_window->addChild(m_tobi);
 
 }
 void    Game::    input()
@@ -49,8 +54,13 @@ void    Game::    input()
             break;
             
         case SDL_KEYDOWN:
-            inputKeyDown( ev.key );
+            inputKeyDown (ev.key);
+            m_tobi->input (ev.key);
             break;
+        case SDL_KEYUP:
+            m_tobi->input (ev.key);
+            break;
+            
         case SDL_FINGERDOWN:
         case SDL_FINGERUP:
         case SDL_FINGERMOTION:
@@ -109,8 +119,7 @@ void    Game::    inputKeyDown( SDL_KeyboardEvent sdlKeyEv )
         }
     }
     
-    else
-        m_console->input( k );
+    m_console->input( k );
     
 }
 void    Game::    fingerEvent( SDL_TouchFingerEvent fingerEv )

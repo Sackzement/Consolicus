@@ -34,13 +34,15 @@ void     Window::    render     ()
     
     if ( ! existsSdlWindow() )     return;
     
+    SDL_Surface* winSurf = SDL_GetWindowSurface(m_sdlWin);
+    
     vector<Object*>& chs = getChildren();
     for ( Object* obj : chs )
     {
         if ( obj->getType() == ot_sprite )
         {
             Sprite* sp = (Sprite*)obj;
-            sp->renderTo( SDL_GetWindowSurface(m_sdlWin) ) ;
+            sp->renderTo( winSurf ) ;
         }
     }
     

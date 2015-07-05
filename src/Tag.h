@@ -49,7 +49,7 @@ public:
         
     }
     
-   ~tag ()    noexcept  {
+   ~tag ()    /*noexcept*/  {
         
         reset();
         
@@ -71,7 +71,7 @@ public:
         
     }
     
-    tag              ( tag &&  t )    noexcept  {
+    tag              ( tag &&  t )    /*noexcept*/  {
         
         m_type      = t.type;
         m_object    = t.object;
@@ -80,7 +80,7 @@ public:
         t.reset();
         
     }
-    tag &  operator= ( tag &&  t )    noexcept  {
+    tag &  operator= ( tag &&  t )    /*noexcept*/  {
         
         swap( m_type, t.m_type ) ;
         swap( m_object, t.m_object ) ;
